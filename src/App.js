@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import Tambah from "./components/ButtonTambah";
+import Header from "./components/Header";
+import EmptyState from "./components/EmptyState";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="text-2xl font-bold">
+      <Header />
+      <div className="md:w-3/4 mx-auto">
+        <div className="relative my-8">
+          <div className="absolute right-0 top-0">
+            <Tambah data-cy="activity-add-button" />
+          </div>
+          <h1 className="text-4xl">Activity</h1>
+          <EmptyState />
+        </div>
+      </div>
     </div>
   );
 }
