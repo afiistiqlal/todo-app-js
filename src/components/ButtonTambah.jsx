@@ -1,9 +1,12 @@
-function ButtonTambah() {
+function ButtonTambah(props) {
+    const buttonHandler = () => {
+      props.addActivity()
+    }
     return (
       <button
         type="button"
         className="px-8 py-3 font-PoppinsRegular text-white bg-sky-500 hover:bg-sky-600 rounded-full focus:outline-none"
-        // onClick={buttonHandler}
+        onClick={() => buttonHandler()}
       >
         <div className="flex">
           <span>
